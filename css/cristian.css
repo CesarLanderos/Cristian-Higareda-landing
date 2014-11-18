@@ -1,0 +1,17 @@
+body{
+	border-bottom: 8px solid black;
+}
+main{
+	background: url(../img/fondo-main.png) center top no-repeat;
+	/*height: 560px;*/
+	margin-top: 240px;
+	padding-top: 214px;
+	padding-bottom: 6px;
+	/*border-bottom: 8px solid black;*/
+}
+main img#correo{
+	margin-top: 66px;
+}
+main img#datos{
+	margin-top: 70px;
+}
