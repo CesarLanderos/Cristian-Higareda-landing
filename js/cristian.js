@@ -1,23 +1,33 @@
-jQuery(document).ready(function($) {
-	$("#enviar").click(function(event) {
-		
+jQuery(document).ready(function() {
+
+	'use strict';
+
+	$('#enviar').click( function( ) {
+
 		$(this).prop('disabled',true);
 
-		var nombre = $("#nombre").val();
-		var correo = $("#email").val();
-		var mensaje = $("#mensaje").val();
+		var nombre = $('#myModal .nombre').val(),
+			correo = $('#myModal .email').val(),
+			mensaje = $('#myModal .mensaje').val();
 
-		$(".modal-body").fadeOut('slow', function() {
-			$.get('/ajax/correo.php?nombre=' + nombre + '&correo=' + correo + '&mensaje=' + mensaje, function(data) {
-				console.log('/ajax/correo.php?nombre=' + nombre + '&correo=' + correo + '&mensaje=' + mensaje);
+		$('.modal-body').fadeOut('slow', function() {
+
+			$.get( '/ajax/correo.php?nombre=' + nombre +
+				'&correo=' + correo + '&mensaje=' + mensaje,
+			function(data) {
+
 				if( data ){
-					$(".modal-body").fadeIn().html('<span class="glyphicon glyphicon-ok"></span> ¡Enviado!');
+
+					$('.modal-body')
+						.fadeIn()
+						.html('<span class="glyphicon glyphicon-ok"></span>' +
+							' ¡Enviado!');
+
 				}
+
 			});
+
 		});
 
-		
-
-		/* Act on the event */
 	});
 });

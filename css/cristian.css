@@ -3,15 +3,29 @@ body{
 }
 main{
 	background: url(../img/fondo-main.png) center top no-repeat;
-	/*height: 560px;*/
+
 	margin-top: 240px;
-	padding-top: 214px;
+	padding-top: 180px;
 	padding-bottom: 6px;
-	/*border-bottom: 8px solid black;*/
 }
-main img#correo{
-	margin-top: 66px;
+
+.social{
+	width: 430px;
+	margin-bottom: 92px;
 }
-main img#datos{
-	margin-top: 70px;
+
+.descripcion{
+	margin-bottom: 45px;
+}
+
+main .correo{
+	margin-bottom: 16px;
+}
+
+.slogan{
+	margin-bottom: 75px;
+}
+
+main .datos{
+	margin-bottom: 25px;
 }
